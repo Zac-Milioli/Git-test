@@ -15,7 +15,7 @@ print('\n')
 print('_'*10)
 print()
 print('[1] - Mostrar usuários registrados \n[2] - Adicionar novos usuários \n[3] - Excluir usuário registrado')
-opt = int(input('O que fazer? '))
+opt = int(input('Selecione a opção - '))
 print('_'*10)
 
 if opt == 1:
