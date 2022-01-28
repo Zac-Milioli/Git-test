@@ -33,17 +33,21 @@ while True:
     opt = int(input('Selecione a opção - '))
 
     if opt == 1:
+        os.system('clear')
         obj_user.users()
         char = getch.getch()
         os.system('clear')
     elif opt == 2:
+        os.system('clear')
         obj_user.add_user()
         char = getch.getch()
         os.system('clear')
     elif opt == 3:
+        os.system('clear')
         obj_user.del_user()
         os.system('clear')
     elif opt == 4:
+        os.system('clear')
         obj_user.modify()
         os.system('clear')
     elif opt == 5:

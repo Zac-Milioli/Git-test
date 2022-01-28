@@ -11,9 +11,9 @@ class Data_log:
     def register(self):
         for i in range(0, self.log_num):
             print(f'\n{i + 1}° :')
-            name = input('\nNome de usuário: ')
-            password = input('\nSenha: ')
-            cpf = str(input('\nCPF: '))
+            name = input('Nome de usuário: ')
+            password = input('Senha: ')
+            cpf = str(input('CPF: '))
             self.list_name.append(name)
             self.list_password.append(password)
             self.list_cpf.append(cpf)
