@@ -57,3 +57,36 @@ class Data_log:
                 self.list_password.pop(log_position)
                 self.list_cpf.pop(log_position)
                 self.log_num -= 1
+
+    def modify(self):
+        opt = int(input('Modificar [1] Nome [2] Senha [3] CPF\n'))
+        if opt == 1:
+            opt = int(input('Selecionar usuário por [1] Nome [2] CPF\n'))
+            if opt == 1:
+                name = input('\nNome do usuário: ')
+                log_position = self.list_name.index(name)
+                self.list_name[log_position] = input('Digite o novo nome: ')
+            elif opt == 2:
+                cpf = input('\nCPF do usuário: ')
+                log_position = self.list_cpf.index(cpf)
+                self.list_name[log_position] = input('Digite o novo nome: ')
+        elif opt == 2:
+            opt = int(input('Selecionar usuário por [1] Nome [2] CPF\n'))
+            if opt == 1:
+                name = input('\nNome do usuário: ')
+                log_position = self.list_name.index(name)
+                self.list_password[log_position] = input('Digite a nova senha: ')
+            elif opt == 2:
+                cpf = input('\nCPF do usuário: ')
+                log_position = self.list_cpf.index(cpf)
+                self.list_password[log_position] = input('Digite a nova senha: ')
+        elif opt == 3:
+            opt = int(input('Selecionar usuário por [1] Nome [2] CPF\n'))
+            if opt == 1:
+                name = input('\nNome do usuário: ')
+                log_position = self.list_name.index(name)
+                self.list_cpf[log_position] = input('Digite o novo CPF: ')
+            elif opt == 2:
+                cpf = input('\nCPF do usuário: ')
+                log_position = self.list_cpf.index(cpf)
+                self.list_cpf[log_position] = input('Digite o novo CPF: ')
