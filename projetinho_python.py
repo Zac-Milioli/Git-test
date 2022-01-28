@@ -1,4 +1,6 @@
 from funct import Data_log
+import os
+import getch
 
 print('- '*20)
 print('\nSISTEMA SIMPLES REPRESENTATIVO DE REGISTRO DE USUÁRIOS\n')
@@ -10,6 +12,8 @@ list_password = []
 obj_user = Data_log(log_num, list_name, list_password)
 
 obj_user.register()
+os.system('clear')
+
 
 def menu():
     print('\n')
@@ -28,11 +32,16 @@ while True:
 
     if opt == 1:
         obj_user.users()
+        char = getch.getch()
+        os.system('clear')
     elif opt == 2:
         obj_user.add_user()
         obj_user.users()
+        char = getch.getch()
+        os.system('clear')
     elif opt == 3:
         obj_user.del_user()
         obj_user.users()
+        os.system('clear')
     elif opt == 4:
         break
