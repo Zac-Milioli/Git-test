@@ -1,5 +1,8 @@
+from typing import Optional
+
+
 class Data_log:
-    def __init__(self, log_num, list_name, list_password, list_cpf):
+    def __init__(self, log_num: Optional[int], list_name, list_password, list_cpf):
         self.log_num = log_num
         self.list_name = list_name
         self.list_password = list_password
