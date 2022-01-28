@@ -11,18 +11,28 @@ obj_user = Data_log(log_num, list_name, list_password)
 
 obj_user.register()
 
-print('\n')
-print('_'*10)
-print()
-print('[1] - Mostrar usuários registrados \n[2] - Adicionar novos usuários \n[3] - Excluir usuário registrado')
-opt = int(input('Selecione a opção - '))
-print('_'*10)
+def menu():
+    print('\n')
+    print('_'*10)
+    print()
+    print('[1] - Mostrar usuários registrados')
+    print('[2] - Registrar novos usuários')
+    print('[3] - Remover usuário registrado')
+    print('[4] - Encerrar')
+    print('_'*10)
 
-if opt == 1:
-    obj_user.users()
-elif opt == 2:
-    obj_user.add_user()
-    obj_user.users()
-elif opt == 3:
-    obj_user.del_user()
-    obj_user.users()
+while True:
+
+    menu()
+    opt = int(input('Selecione a opção - '))
+
+    if opt == 1:
+        obj_user.users()
+    elif opt == 2:
+        obj_user.add_user()
+        obj_user.users()
+    elif opt == 3:
+        obj_user.del_user()
+        obj_user.users()
+    elif opt == 4:
+        break
